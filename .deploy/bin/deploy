@@ -1,3 +1,14 @@
 #!/bin/sh
+i=1
+while true
+do
+    if [ `expr $i % 500` = 0 ]; then
+       echo "YES $i"
+    fi
+    i=`expr $i + 1`
+    if [ $i -gt 10000 ]; then
+	break
+    fi
+done
 
-sleep 10s
+echo "finish!!!"
